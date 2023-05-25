@@ -1,13 +1,13 @@
-## Backend for Contactbook.
+# Backend for Contactbook.
 Launch command - npm run start:dev
 
-# Registration Page
+#№ Registration Page
 Realised registration of user
 
-# Login Page
+#№ Login Page
 Realised login of user
 
-# Contact Page
+#№ Contact Page
 Realised getting, adding, updating and deletion of contact.
 
 All information is saved after refresh.
