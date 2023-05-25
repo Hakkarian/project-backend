@@ -21,6 +21,7 @@ const authenticate = async (req, res, next) => {
             next(ErrorHandler(401))
         }
         req.user = user;
+        console.log(user)
         next()
     } catch (error) {
         next(ErrorHandler(401))
