@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { User } = require('../models/user')
+const { User } = require('../models/user');
 
 
 const { ErrorHandler } = require("../helpers");
@@ -16,13 +16,13 @@ const authenticate = async (req, res, next) => {
     }
     try {
         const { id } = jwt.verify(token, SECRET_KEY)
-        const user = await User.findById(id)
+        const user = await User.findById(id);
         if (!user || !user.token || user.token !== token) {
             next(ErrorHandler(401))
         }
         req.user = user;
         console.log(user)
-        next()
+        next();
     } catch (error) {
         next(ErrorHandler(401))
     }
